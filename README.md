@@ -1,1 +1,1 @@
-extensão pra rodar: VScode live server
+Se preferir, utilize a extensão do VScode pra rodar: live server
