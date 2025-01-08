@@ -1,4 +1,4 @@
-const canvas = document.getElementById("meuCanvas");
+const canvas = document.getElementById("Cenario");
 const ctx = canvas.getContext("2d");
 
 const larguraCanvas = canvas.clientWidth;
@@ -15,7 +15,7 @@ cacto.src = "cacto.png";
 let posY = alturaCanvas - 65; 
 let pulando = false; 
 let alturaPulo = 0; 
-let gravidade = 0.15; 
+let gravidade = 0.25; 
 
 //Variaveis para o cacto
 let posX = [larguraCanvas, larguraCanvas, larguraCanvas, larguraCanvas, larguraCanvas]; 
@@ -33,7 +33,7 @@ document.addEventListener("keydown", function(event) {
         pular();
     }
     if(event.key === "ArrowDown"){
-        gravidade = 0.65;
+        gravidade = 0.85;
     }
 });
 
@@ -67,8 +67,9 @@ function atualizar() {
     if (gameOver) {
         ctx.clearRect(0, 0, larguraCanvas, alturaCanvas);
         ctx.font = "40px Arial";
-        ctx.fillText("Fim de jogo", larguraCanvas / 2 - 150, alturaCanvas / 2);
-        ctx.fillText("Pontuação Final: " + pontuacao, larguraCanvas / 2 - 180, alturaCanvas / 2 + 50);
+        ctx.fillText("Fim de jogo", (larguraCanvas/2 - 150), alturaCanvas / 2 - 40);
+        ctx.fillText("Pontuação Final: " + pontuacao, (larguraCanvas/2 - 180), alturaCanvas / 2 + 25);
+        ctx.fillText("Pressione F5", (larguraCanvas/2 - 150), alturaCanvas / 2 + 90);
         return;
     }
 
