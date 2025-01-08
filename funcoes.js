@@ -15,7 +15,7 @@ cacto.src = "cacto.png";
 let posY = alturaCanvas - 65; 
 let pulando = false; 
 let alturaPulo = 0; 
-let gravidade = 0.25; 
+let gravidade = 0.2; 
 
 //Variaveis para o cacto
 let posX = [larguraCanvas, larguraCanvas, larguraCanvas, larguraCanvas, larguraCanvas]; 
@@ -33,21 +33,21 @@ document.addEventListener("keydown", function(event) {
         pular();
     }
     if(event.key === "ArrowDown"){
-        gravidade = 0.85;
+        gravidade = 0.8;
     }
 });
 
 //Se a tecla foi solta
 document.addEventListener("keyup", function(event) {
     if(event.key === "ArrowDown"){
-        gravidade = 0.15;
+        gravidade = 0.2;
     }
 });
 
 function pular() {
     if (!pulando) {
         pulando = true;
-        alturaPulo = 5;
+        alturaPulo = 6;
     }
 }
 
